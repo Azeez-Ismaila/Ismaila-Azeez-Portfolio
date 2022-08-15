@@ -4,11 +4,65 @@
     <title>Ismaila Azeez Oluwatobi - Portfolio Website</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="shortcut icon"
+      href="/img/favicon/favicon.ico"
+      type="image/x-icon"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/img/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/img/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/img/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
     <link rel="stylesheet" href="css/font-awesome.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        // https://dashboard.emailjs.com/admin/account
+        emailjs.init("aPX13V3nyg3Ia5CzL");
+      })();
+    </script>
     <script src="js/script.js" defer></script>
   </head>
   <body>
+    <!-- Page Loader Start -->
+    <div class="page-loader">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <!-- Page Loader Start -->
+
+    <!-- Background Circles Start -->
+    <div class="bg-circles">
+      <div class="circle-1"></div>
+      <div class="circle-2"></div>
+      <div class="circle-3"></div>
+      <div class="circle-4"></div>
+    </div>
+    <!-- Background Circles End -->
+
+    <!-- Overlay Start -->
+    <div class="overlay"></div>
+    <!-- Overlay End -->
+
     <!-- main-start -->
     <div class="main">
       <!-- Header Start -->
@@ -18,24 +72,40 @@
             <button type="button" class="nav-toggler">
               <span></span>
             </button>
+            <nav class="nav">
+              <div class="nav-inner">
+                <ul>
+                  <li><a href="#home" class="nav-item link-item">Home</a></li>
+                  <li><a href="#about" class="nav-item link-item">About</a></li>
+                  <li>
+                    <a href="#portfolio" class="nav-item link-item"
+                      >Portfolio</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#contact" class="nav-item link-item">Contact</a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
           </div>
         </div>
       </header>
       <!-- Header End -->
       <!-- Home-Section-start -->
-      <section class="home-section align-items-center">
+      <section class="home-section align-items-center active" id="home">
         <div class="container">
           <div class="row align-items-center">
             <div class="home-text">
               <p>Hello I'm</p>
               <h1>Ismaila Azeez</h1>
               <h2>Frontend Web Developer</h2>
-              <a href="" class="btn">More About Me</a>
-              <a href="" class="btn">Portfolio</a>
+              <a href="#about" class="btn link-item">More About Me</a>
+              <a href="#portfolio" class="btn link-item">Portfolio</a>
             </div>
             <div class="home-img">
               <div class="img-box">
-                <img src="img/profile-img.png" alt="Ismaila Azeez Picture" />
+                <img src="img/zyzman.jpg" alt="Ismaila Azeez Picture" />
               </div>
             </div>
           </div>
@@ -43,7 +113,7 @@
       </section>
       <!-- Home-Section-End -->
       <!-- About Section Start -->
-      <section class="about-section sec-padding hidden">
+      <section class="about-section sec-padding" id="about">
         <div class="container">
           <div class="row">
             <div class="section-title">
@@ -53,15 +123,14 @@
           <div class="row">
             <div class="about-img">
               <div class="img-box">
-                <img src="img/about-img.png" alt="About Ismaila Azeez" />
+                <img src="img/IMG_4625.jpg" alt="About Ismaila Azeez" />
               </div>
             </div>
             <div class="about-text">
               <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae
-                dignissimos, architecto, dolores natus minus ab, quisquam
-                doloribus cum maiores at enim? Voluptatibus in velit itaque amet
-                molestiae ipsa explicabo voluptates?
+                Hi, I'm Ismaila Azeez, A Motivated Frontend developer in
+                bringing Website and Applications to life. I am passionate about
+                solving problems with my IT skills.
               </p>
               <h3>Skills</h3>
               <div class="skills">
@@ -73,6 +142,7 @@
                 <div class="skill-item">Typescript</div>
                 <div class="skill-item">Angular</div>
                 <div class="skill-item">React</div>
+                <div class="skill-item">Tailwind</div>
               </div>
               <div class="about-tabs">
                 <button
@@ -96,33 +166,43 @@
                   <div class="timeline-item">
                     <span class="date">2016 - 2021</span>
                     <h4>
-                      Bachelor of Science - <span>University of Lagos</span>
+                      Bachelor of Science -
+                      <span>University of Lagos (Bsc Biochemistry (2:1))</span>
                     </h4>
                     <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Inventore ad minima consequuntur pariatur odit id nihil
-                      labore iure? Id harum corrupti, temporibus eius corporis
-                      modi? Inventore quas non ducimus consequatur!
+                      The University of Lagos, popularly known as UNILAG, is a
+                      public research university located in Lagos, Nigeria and
+                      was founded in 1962. UNILAG is one of the first generation
+                      universities in Nigeria and is ranked among the top
+                      universities in the world in major education publications.
+                      Having completed the requirements I graduated with Second
+                      Class Upper in Biochemistry.
                     </p>
                   </div>
                   <div class="timeline-item">
                     <span class="date">2021</span>
-                    <h4>FreeCodeCamp</h4>
+                    <h4>
+                      FreeCodeCamp -
+                      <span>Responsive Web Design Certification</span>
+                    </h4>
                     <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Inventore ad minima consequuntur pariatur odit id nihil
-                      labore iure? Id harum corrupti, temporibus eius corporis
-                      modi? Inventore quas non ducimus consequatur!
+                      freeCodeCamp is a non-profit organization that consists of
+                      an interactive learning web platform, an online community
+                      forum, chat rooms, online publications and local
+                      organizations that intend to make learning web development
+                      accessible to anyone. Beginning with tutorials that
+                      introduce students to HTML, CSS and JavaScript, I was able
+                      to grasp indepth knowledge of Web Development.
                     </p>
                   </div>
                   <div class="timeline-item">
-                    <span class="date">2016 - 2021</span>
-                    <h4>lorem</h4>
+                    <span class="date">2021 - Present</span>
+                    <h4>Online Resources</h4>
                     <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Inventore ad minima consequuntur pariatur odit id nihil
-                      labore iure? Id harum corrupti, temporibus eius corporis
-                      modi? Inventore quas non ducimus consequatur!
+                      Online Resources like Udemy, Youtube, Twitter, Google etc
+                      has provided access to various courses to enlighten me in
+                      web development and this has made me been able to learn
+                      React, Angular, Bootstrap, Tailwind, Git and Github etc.
                     </p>
                   </div>
                 </div>
@@ -131,46 +211,66 @@
               <!-- Experience Start -->
               <div class="tab-content" id="experience">
                 <div class="timeline-item">
-                  <span class="date">2020 - 2021</span>
-                  <h4>lorem</h4>
-                  <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Nobis qui a ipsum blanditiis, ducimus amet doloribus cumque
-                    in earum expedita tempora delectus, neque nulla totam, et
-                    rem! Quod, dolor molestias!
-                  </p>
+                  <span class="date">2022</span>
+                  <h4>Frontend Engineer (Mobile App)</h4>
+                  <ul>
+                    <li>
+                      Converted design and mockups to high-quality frontend
+                      components using Javascript and Angular Components
+                    </li>
+                    <li>Built Mobile App using Cordova, Angular and Ionic</li>
+                    <li>Maintaining Company's mobile applications.</li>
+                    <li>
+                      Worked on building out new features for the mobile
+                      applications.
+                    </li>
+                    <li>
+                      Contribute to the work of the organization as appropriate
+                      and documentation of all tasks assigned
+                    </li>
+                  </ul>
                 </div>
                 <div class="timeline-item">
-                  <span class="date">2020 - 2021</span>
-                  <h4>lorem</h4>
-                  <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Nobis qui a ipsum blanditiis, ducimus amet doloribus cumque
-                    in earum expedita tempora delectus, neque nulla totam, et
-                    rem! Quod, dolor molestias!
-                  </p>
+                  <span class="date">Sept 2020 - Jan 2021</span>
+                  <h4>Undergraduate Internship</h4>
+                  <ul>
+                    <li>
+                      Efficiently gained enough knowledge in short time to be
+                      able to carry out laboratory tests
+                    </li>
+                    <li>
+                      Efficiently met up to daily activities and worked with my
+                      colleagues and superiors.
+                    </li>
+                  </ul>
                 </div>
                 <div class="timeline-item">
-                  <span class="date">2020 - 2021</span>
-                  <h4>lorem</h4>
-                  <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Nobis qui a ipsum blanditiis, ducimus amet doloribus cumque
-                    in earum expedita tempora delectus, neque nulla totam, et
-                    rem! Quod, dolor molestias!
-                  </p>
+                  <span class="date">Jan 2017 - Dec 2021</span>
+                  <h4>Freelancer</h4>
+                  <ul>
+                    <li>Provided academic guidance to students</li>
+                    <li>
+                      Designed and developed websites as per the requests of the
+                      client.
+                    </li>
+                  </ul>
                 </div>
               </div>
               <!-- Experience End -->
-              <a href="#" class="btn">Download CV</a>
-              <a href="#" class="btn">Contact Me</a>
+              <a
+                href="https://drive.google.com/file/d/1We9LLQJk5oRepJOgX-jbREMAwhrQ3-xK/view?usp=sharing"
+                class="btn"
+                target="_blank"
+                >Download CV</a
+              >
+              <a href="#contact" class="btn link-item">Contact Me</a>
             </div>
           </div>
         </div>
       </section>
       <!-- About Section End -->
       <!-- Portfolio Section start -->
-      <section class="portfolio-section sec-padding hidden">
+      <section class="portfolio-section sec-padding" id="portfolio">
         <div class="container">
           <div class="row">
             <div class="section-title">
@@ -181,39 +281,48 @@
             <!-- portfolio item start -->
             <div class="portfolio-item">
               <div class="portfolio-item-thumbnail">
-                <img src="img/portfolio/1.jpg" alt="Portfolio item thumb" />
+                <img
+                  src="img/portfolio/Recipe-finderr.PNG"
+                  alt="Portfolio item thumb"
+                />
               </div>
-              <h3 class="portfolio-item-title">Lorem ipsum</h3>
+              <h3 class="portfolio-item-title">Recipe Finderr</h3>
               <button type="button" class="btn view-project-btn">
                 View Project
               </button>
               <div class="portfolio-item-details">
                 <div class="description">
                   <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Vitae sed odit, molestias ea vel saepe nihil ad suscipit?
-                    Possimus fugiat molestiae explicabo praesentium eos at
-                    suscipit illum consequatur voluptates expedita.
+                    Recipe Finderr is a Web Application built for users to
+                    enable easy access to food recipes
                   </p>
                 </div>
                 <div class="general-info">
                   <ul>
-                    <li>Created - <span>lorem date</span></li>
+                    <li>Created - <span>06-05-2022</span></li>
                     <li>
-                      Technologies Used - <span>Html,css,bootstrap 5</span>
+                      Technologies Used -
+                      <span>Html, Css, Javascript, React</span>
                     </li>
-                    <li>Role - <span>Frontend</span></li>
                     <li>
                       View live -
                       <span
-                        ><a href="#" target="_blank">add fancy icon</a></span
-                      >
+                        ><a
+                          href="https://recipe-finderr.netlify.app"
+                          target="_blank"
+                          ><i
+                            class="fa-solid fa-arrow-up-right-from-square fa-2x"
+                          ></i></a
+                      ></span>
                     </li>
                     <li>
                       View Source Code -
                       <span
-                        ><a href="#" target="_blank">add Github icon)</a></span
-                      >
+                        ><a
+                          href="https://github.com/Azeez-Ismaila/Recipe-finder"
+                          target="_blank"
+                          ><i class="fa-brands fa-github fa-2x"></i></a
+                      ></span>
                     </li>
                   </ul>
                 </div>
@@ -223,39 +332,46 @@
             <!-- portfolio item start -->
             <div class="portfolio-item">
               <div class="portfolio-item-thumbnail">
-                <img src="img/portfolio/2.jpg" alt="Portfolio item thumb" />
+                <img
+                  src="img/portfolio/syntax.PNG"
+                  alt="Portfolio item thumb"
+                />
               </div>
-              <h3 class="portfolio-item-title">Personal Portfolio Website</h3>
+              <h3 class="portfolio-item-title">Syntax Landing Page</h3>
               <button type="button" class="btn view-project-btn">
                 View Project
               </button>
               <div class="portfolio-item-details">
                 <div class="description">
                   <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Vitae sed odit, molestias ea vel saepe nihil ad suscipit?
-                    Possimus fugiat molestiae explicabo praesentium eos at
-                    suscipit illum consequatur voluptates expedita.
+                    Syntax is a fictional company that helps users to build
+                    websites for their businesses and personal use.
                   </p>
                 </div>
                 <div class="general-info">
                   <ul>
-                    <li>Created - <span>lorem date</span></li>
                     <li>
-                      Technologies Used - <span>Html,css,bootstrap 5</span>
+                      Technologies Used - <span>Html, Css, Javascript</span>
                     </li>
-                    <li>Role - <span>Frontend</span></li>
                     <li>
                       View live -
                       <span
-                        ><a href="#" target="_blank">add fancy icon</a></span
-                      >
+                        ><a
+                          href="https://syntax-zyzman.netlify.app/"
+                          target="_blank"
+                          ><i
+                            class="fa-solid fa-arrow-up-right-from-square fa-2x"
+                          ></i></a
+                      ></span>
                     </li>
                     <li>
                       View Source Code -
                       <span
-                        ><a href="#" target="_blank">add Github icon)</a></span
-                      >
+                        ><a
+                          href="https://github.com/Azeez-Ismaila/Syntax"
+                          target="_blank"
+                          ><i class="fa-brands fa-github fa-2x"></i></a
+                      ></span>
                     </li>
                   </ul>
                 </div>
@@ -265,39 +381,49 @@
             <!-- portfolio item start -->
             <div class="portfolio-item">
               <div class="portfolio-item-thumbnail">
-                <img src="img/portfolio/3.jpg" alt="Portfolio item thumb" />
+                <img
+                  src="img/portfolio/moovie-database.png"
+                  alt="Portfolio item thumb"
+                />
               </div>
-              <h3 class="portfolio-item-title">App Landing Page</h3>
+              <h3 class="portfolio-item-title">Movie Database App</h3>
               <button type="button" class="btn view-project-btn">
                 View Project
               </button>
               <div class="portfolio-item-details">
                 <div class="description">
                   <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Vitae sed odit, molestias ea vel saepe nihil ad suscipit?
-                    Possimus fugiat molestiae explicabo praesentium eos at
-                    suscipit illum consequatur voluptates expedita.
+                    Movie Database App is a web application built using React,
+                    it is connected to a movie database API that sends a user
+                    the Title, Release date, Picture and Rating of a Movie.
                   </p>
                 </div>
                 <div class="general-info">
                   <ul>
-                    <li>Created - <span>lorem date</span></li>
                     <li>
-                      Technologies Used - <span>Html,css,bootstrap 5</span>
+                      Technologies Used -
+                      <span>Html,Css,Javascript and React.</span>
                     </li>
-                    <li>Role - <span>Frontend</span></li>
+
                     <li>
                       View live -
                       <span
-                        ><a href="#" target="_blank">add fancy icon</a></span
-                      >
+                        ><a
+                          href="https://moovie-databasee.netlify.app"
+                          target="_blank"
+                          ><i
+                            class="fa-solid fa-arrow-up-right-from-square fa-2x"
+                          ></i></a
+                      ></span>
                     </li>
                     <li>
                       View Source Code -
                       <span
-                        ><a href="#" target="_blank">add Github icon)</a></span
-                      >
+                        ><a
+                          href="https://github.com/Azeez-Ismaila/Movie-Database-App"
+                          target="_blank"
+                          ><i class="fa-brands fa-github fa-2x"></i></a
+                      ></span>
                     </li>
                   </ul>
                 </div>
@@ -307,39 +433,50 @@
             <!-- portfolio item start -->
             <div class="portfolio-item">
               <div class="portfolio-item-thumbnail">
-                <img src="img/portfolio/4.jpg" alt="Portfolio item thumb" />
+                <img
+                  src="img/portfolio/todolist-application.png"
+                  alt="Portfolio item thumb"
+                />
               </div>
-              <h3 class="portfolio-item-title">Restaurant Website</h3>
+              <h3 class="portfolio-item-title">A Todo-List Application</h3>
               <button type="button" class="btn view-project-btn">
                 View Project
               </button>
               <div class="portfolio-item-details">
                 <div class="description">
                   <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Vitae sed odit, molestias ea vel saepe nihil ad suscipit?
-                    Possimus fugiat molestiae explicabo praesentium eos at
-                    suscipit illum consequatur voluptates expedita.
+                    Everyone needs an organized way to sort their day to day
+                    activities, Todo-List App provides users easy access to
+                    management of their day to day activities thereby enhancing
+                    their productivity.
                   </p>
                 </div>
                 <div class="general-info">
                   <ul>
-                    <li>Created - <span>lorem date</span></li>
                     <li>
-                      Technologies Used - <span>Html,css,bootstrap 5</span>
+                      Technologies Used -
+                      <span>Html,Css,Javascript and React.</span>
                     </li>
-                    <li>Role - <span>Frontend</span></li>
+
                     <li>
                       View live -
                       <span
-                        ><a href="#" target="_blank">add fancy icon</a></span
-                      >
+                        ><a
+                          href="https://todolist-applicationn.netlify.app"
+                          target="_blank"
+                          ><i
+                            class="fa-solid fa-arrow-up-right-from-square fa-2x"
+                          ></i></a
+                      ></span>
                     </li>
                     <li>
                       View Source Code -
                       <span
-                        ><a href="#" target="_blank">add Github icon)</a></span
-                      >
+                        ><a
+                          href="https://github.com/Azeez-Ismaila/ReactToDoListApp"
+                          target="_blank"
+                          ><i class="fa-brands fa-github fa-2x"></i></a
+                      ></span>
                     </li>
                   </ul>
                 </div>
@@ -349,40 +486,48 @@
             <!-- portfolio item start -->
             <div class="portfolio-item">
               <div class="portfolio-item-thumbnail">
-                <img src="img/portfolio/5.jpg" alt="Portfolio item thumb" />
+                <img
+                  src="img/portfolio/tindog.png"
+                  alt="Portfolio item thumb"
+                />
               </div>
-              <h3 class="portfolio-item-title">Personal Portfolio Website</h3>
+              <h3 class="portfolio-item-title">Tindog Landing Page</h3>
               <button type="button" class="btn view-project-btn">
                 View Project
               </button>
               <div class="portfolio-item-details">
                 <div class="description">
                   <p>
-                    <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Vitae sed odit, molestias ea vel saepe nihil ad suscipit?
-                    Possimus fugiat molestiae explicabo praesentium eos at
-                    suscipit illum consequatur voluptates expedita. -->
-                    no work
+                    Tindog is basically Tinder but for dogs, this is a landing
+                    page for a fictional dating platform for dogs where various
+                    breeds of dogs meet other dogs for friendship, mating etc.
                   </p>
                 </div>
                 <div class="general-info">
                   <ul>
-                    <li>Created - <span>lorem date</span></li>
                     <li>
-                      Technologies Used - <span>Html,css,bootstrap 5</span>
+                      Technologies Used -
+                      <span>Html, Css, Bootstrap and Javascript</span>
                     </li>
-                    <li>Role - <span>Frontend</span></li>
                     <li>
                       View live -
                       <span
-                        ><a href="#" target="_blank">add fancy icon</a></span
-                      >
+                        ><a
+                          href="https://tindog-challenge-zyzman.netlify.app"
+                          target="_blank"
+                          ><i
+                            class="fa-solid fa-arrow-up-right-from-square fa-2x"
+                          ></i></a
+                      ></span>
                     </li>
                     <li>
                       View Source Code -
                       <span
-                        ><a href="#" target="_blank">add Github icon)</a></span
-                      >
+                        ><a
+                          href="https://github.com/Azeez-Ismaila/tindog"
+                          target="_blank"
+                          ><i class="fa-brands fa-github fa-2x"></i></a
+                      ></span>
                     </li>
                   </ul>
                 </div>
@@ -392,40 +537,47 @@
             <!-- portfolio item start -->
             <div class="portfolio-item">
               <div class="portfolio-item-thumbnail">
-                <img src="img/portfolio/6.jpg" alt="Portfolio item thumb" />
+                <img
+                  src="img/portfolio/drumkit-app.png"
+                  alt="Portfolio item thumb"
+                />
               </div>
-              <h3 class="portfolio-item-title">Product Landing Page</h3>
+              <h3 class="portfolio-item-title">Drumkit App</h3>
               <button type="button" class="btn view-project-btn">
                 View Project
               </button>
               <div class="portfolio-item-details">
                 <div class="description">
                   <p>
-                    <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Vitae sed odit, molestias ea vel saepe nihil ad suscipit?
-                    Possimus fugiat molestiae explicabo praesentium eos at
-                    suscipit illum consequatur voluptates expedita. -->
-                    it worked
+                    Drumkit App is basically a web application for producing
+                    sounds of a drum set.
                   </p>
                 </div>
                 <div class="general-info">
                   <ul>
-                    <li>Created - <span>lorem date</span></li>
                     <li>
-                      Technologies Used - <span>Html,css,bootstrap 5</span>
+                      Technologies Used - <span>Html, Css and Javascript</span>
                     </li>
-                    <li>Role - <span>Frontend</span></li>
+
                     <li>
                       View live -
                       <span
-                        ><a href="#" target="_blank">add fancy icon</a></span
-                      >
+                        ><a
+                          href="https://drumkitapp-by-zyzman.netlify.app"
+                          target="_blank"
+                          ><i
+                            class="fa-solid fa-arrow-up-right-from-square fa-2x"
+                          ></i></a
+                      ></span>
                     </li>
                     <li>
                       View Source Code -
                       <span
-                        ><a href="#" target="_blank">add Github icon)</a></span
-                      >
+                        ><a
+                          href="https://github.com/Azeez-Ismaila/Drum-kit-App"
+                          target="_blank"
+                          ><i class="fa-brands fa-github fa-2x"></i></a
+                      ></span>
                     </li>
                   </ul>
                 </div>
@@ -437,7 +589,7 @@
       </section>
       <!-- Portfolio Section end -->
       <!-- Contact Section Start -->
-      <section class="contact-section sec-padding hidden">
+      <section class="contact-section sec-padding" id="contact">
         <div class="container">
           <div class="row">
             <div class="section-title">
@@ -446,11 +598,13 @@
           </div>
           <div class="row">
             <div class="contact-form">
-              <form>
+              <form id="contact-form">
                 <div class="row">
                   <div class="input-group">
                     <input
                       type="text"
+                      id="fullname"
+                      name="user_name"
                       placeholder="Name"
                       class="input-control"
                       required
@@ -459,6 +613,8 @@
                   <div class="input-group">
                     <input
                       type="email"
+                      id="email_id"
+                      name="user_email"
                       placeholder="Email"
                       class="input-control"
                       required
@@ -467,6 +623,7 @@
                   <div class="input-group">
                     <input
                       type="text"
+                      id="subject"
                       placeholder="Subject"
                       class="input-control"
                       required
@@ -474,12 +631,16 @@
                   </div>
                   <div class="input-group">
                     <textarea
+                      name="message"
+                      id="message"
                       placeholder="Message"
                       class="input-control"
                     ></textarea>
                   </div>
                   <div class="submit-btn">
-                    <button type="submit" class="btn">Send Message</button>
+                    <button type="submit" class="btn" id="submitContact">
+                      Send Message
+                    </button>
                   </div>
                 </div>
               </form>
@@ -496,22 +657,28 @@
               <div class="contact-info-item">
                 <h3>Follow Me</h3>
                 <div class="social-links">
-                  <a href="http://" target="_blank"
+                  <a
+                    href="https://www.facebook.com/azeez.ismaila"
+                    target="_blank"
                     ><i class="fa-brands fa-facebook"></i
                   ></a>
-                  <a href="http://" target="_blank"
+                  <a
+                    href="https://twitter.com/Mr_Zyzie?t=AmuViux7j9o-4D6vZsOs1w&s=09"
+                    target="_blank"
                     ><i class="fa-brands fa-twitter"></i
                   ></a>
-                  <a href="http://" target="_blank"
+                  <a href="https://www.instagram.com/zyzmann" target="_blank"
                     ><i class="fa-brands fa-instagram"></i
                   ></a>
-                  <a href="http://" target="_blank"
+                  <a
+                    href="https://www.linkedin.com/in/azeez-ismaila"
+                    target="_blank"
                     ><i class="fa-brands fa-linkedin"></i
                   ></a>
-                  <a href="http://" target="_blank"
+                  <a href="https://github.com/Azeez-Ismaila" target="_blank"
                     ><i class="fa-brands fa-github"></i
                   ></a>
-                  <a href="http://" target="_blank"
+                  <a href="https://wa.link/bnuma3" target="_blank"
                     ><i class="fa-brands fa-whatsapp"></i
                   ></a>
                 </div>
